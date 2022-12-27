@@ -1,0 +1,63 @@
+body {
+    overflow: hidden;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* La partie pour créer le bouton*/
+.button {
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 0;
+    color: white;
+    background: transparent;
+    position: absolute;
+    margin: 20px;
+    transition: all .25s;
+    left: 40%;
+    font-weight: bold;
+  }
+
+  .fond {
+    position: relative;
+  }
+
+  .button::after,.button::before {
+    border: 3px solid #fff;
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    transition: all .25s;
+  }
+/*Cette partie va servir à faire l'effet quand on survole le bouton*/
+.button:hover::after {
+    transform: translate(-5px, -5px);
+}
+
+.button:hover::before {
+    transform: translate(5px, 5px);
+}
+
+
+
+/* Pour faire un effet qui alligne 3 background l'un en dessous de l'autre*/
+.bg {
+    height: calc(100vh / 3);
+}
+
+.bg1 {
+    background: url("marques.jpg");
+}
+.bg2 {
+    background: url("mythologie.webp");
+}
+.bg3 {
+    background: url("USA_shutterstock_160587989.jpg");
+}
+
